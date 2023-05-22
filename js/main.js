@@ -11,18 +11,19 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        newTask: '',
+        doneClass : "done",
+        newTask: "",
         tasks : [
                 {
-                    done: false,
+                    done: true,
                     text:"fare l'esercitazione"
                 },
                 {
-                    done: false,
+                    done: true,
                     text: "fare la spesa"
                 },
                 {
-                    done: false,
+                    done: true,
                     text: "Preparare la cena"
                 }
         ]
@@ -34,10 +35,10 @@ createApp({
             done: false,
             text: this.newTask
         });
-        
-        console.log(this.tasks);
-        
-      
+        newTask = "";
+    },
+    delateTask (i){
+        this.tasks.splice(i,1);
     }
   }
 }).mount('#app')

@@ -50,3 +50,7 @@ li {
 .fa-xmark {
     cursor: pointer;
 }
+
+.done {
+    text-decoration: line-through;
+}

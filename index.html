@@ -31,8 +31,8 @@
                 </div>
 
                 <!-- task's list -->
-                <ul v-for="task in tasks">
-                    <li>{{task.text}} <i class="fa-solid fa-xmark"></i></li>
+                <ul>
+                    <li v-for="(task, idx) in tasks" :class="(task.done) ? 'done' : ''">{{task.text}} <div @click="delateTask(idx)"><i class="fa-solid fa-xmark"></i></div></li>
                 </ul>
             </section>
         </main>
