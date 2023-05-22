@@ -16,14 +16,22 @@ createApp({
         tasks : [
                 {
                     done: true,
-                    text:"fare l'esercitazione"
+                    text:"colazione"
                 },
                 {
-                    done: true,
+                    done: false,
                     text: "fare la spesa"
-                },
+                },  
                 {
                     done: true,
+                    text:"finire l'esercitazione"
+                },
+                {
+                    done: false,
+                    text:"palestra"
+                },
+                {
+                    done: false,
                     text: "Preparare la cena"
                 }
         ]

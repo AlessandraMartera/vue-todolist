@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header{
+    text-align: center;
+}
+
 main{
     width: 60%;
     margin: 20px auto;
@@ -16,23 +20,38 @@ section#input{
 }
 input {
     margin-right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #555;
 }
+
+input:hover{
+    border: 2px solid #002fff;
+}
+
 button {
-    padding: 3px;
+    padding: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #555;
+}
+button:hover{
+    background-color: #a6b4f1;
 }
 
 /* container settings */
 #task_container {
     margin: 20px 0;
     border: 1px solid rgb(124, 124, 124);
-    border-radius: 20px;
+    background-color: #a6b4f1;
     min-height: 100px;
 }
 
 #header_task_container {
-    border-radius: 20px 20px 0 0 ;
-    background-color: #ccc;
+    color: #aaa;
+    background-color: #002fff;
     text-align: center;
+    padding: 20px;
 }
 
 /* list element */
@@ -46,6 +65,7 @@ li {
     display: flex;
     justify-content: space-between;
 }
+
 
 .fa-xmark {
     cursor: pointer;
