@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
-
 main{
     width: 60%;
     margin: 20px auto;
@@ -50,4 +45,8 @@ li {
     border-bottom: 1px solid #aaa;
     display: flex;
     justify-content: space-between;
+}
+
+.fa-xmark {
+    cursor: pointer;
 }

@@ -11,11 +11,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        newTask: {
-            text: "",
-            done: false
-            
-        },
+        newTask: '',
         tasks : [
                 {
                     done: false,
@@ -33,34 +29,18 @@ createApp({
     }
   },
   methods: {
-    addNewTask(){
-        console.log(this.newTask.text);
-        this.tasks.push(this.newTask.text);
+    addNewTask() {
+        this.tasks.push({
+            done: false,
+            text: this.newTask
+        });
+        
+        console.log(this.tasks);
+        
+      
     }
   }
 }).mount('#app')
-
-// createapp({
-//     data(){
-//         return {
-//         tasks : [
-//            {
-//             done: false,
-//             text:''
-//            },
-//            {
-//             done: false,
-//             text: ''
-//            },
-//            {
-//             done: false,
-//             text: ''
-//            }
-//         ]
-            
-//         }
-//     }
-// }).mount('#app')
 
 // MILESTONE 1
 // Stampare all’interno di una lista HTML un item per ogni task.
