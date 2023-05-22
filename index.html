@@ -20,7 +20,7 @@
         <main>
             <!-- input section -->
             <section id="input">
-                <input type="text" placeholder="Add a New Task" v-model="newTask">
+                <input type="text" placeholder="Add a New Task" v-model="newTask" @keyup.enter="addNewTask">
                 <button @click="addNewTask">Aggiungi</button>
             </section>
             
@@ -32,7 +32,8 @@
 
                 <!-- task's list -->
                 <ul>
-                    <li v-for="(task, idx) in tasks" :class="(task.done) ? 'done' : ''">{{task.text}} <div @click="delateTask(idx)"><i class="fa-solid fa-xmark"></i></div></li>
+                    <li v-for="(task, idx) in tasks" :class="(task.done) ? 'done' : ''" @click="checkedTask(idx)">
+                        {{task.text}} <div @click="delateTask(idx)"><i class="fa-solid fa-xmark"></i></div></li>
                 </ul>
             </section>
         </main>

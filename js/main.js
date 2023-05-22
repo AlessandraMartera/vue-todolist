@@ -29,26 +29,35 @@ createApp({
         ]
     }
   },
+    // MILESTONE 1
+    // Stampare all’interno di una lista HTML un item per ogni task.
+    // Se la proprietà done è uguale a true, visualizzare il testo del task sbarrato.
+
   methods: {
     addNewTask() {
+        // MILESTONE 3
+        // Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo task, che quindi viene aggiunto alla lista dei task esistenti.
         this.tasks.push({
             done: false,
             text: this.newTask
         });
-        newTask = "";
+        this.newTask = "";
     },
+    // MILESTONE 2
+    // Visualizzare a fianco ad ogni item ha una “x”: cliccando su di essa, il task viene rimosso dalla lista.
     delateTask (i){
         this.tasks.splice(i,1);
+    },
+    checkedTask(iCheked){
+        if(!this.tasks[iCheked].done) {
+            this.tasks[iCheked].done = true;
+        } else {
+            this.tasks[iCheked].done = false;
+        }
     }
   }
 }).mount('#app')
 
-// MILESTONE 1
-// Stampare all’interno di una lista HTML un item per ogni task.
-// Se la proprietà done è uguale a true, visualizzare il testo del task sbarrato.
 
-// MILESTONE 2
-// Visualizzare a fianco ad ogni item ha una “x”: cliccando su di essa, il task viene rimosso dalla lista.
 
-// MILESTONE 3
-// Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo task, che quindi viene aggiunto alla lista dei task esistenti.
+
